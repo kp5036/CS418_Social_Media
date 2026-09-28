@@ -48,7 +48,7 @@ All four datasets load from their URLs in `data_acquisition.ipynb` using `pd.rea
 **Twitter daily counts**
 - Time: Aug 1 to Dec 6, 2016. Place: United States.
 - Important columns: `date` (text), `N` (int, total news views that day), `pct_fake` (float, fraction of views from fake news sites)
-- - First look (chart in the notebook): The share of Twitter news views coming from fake news sites mostly stayed between about 4% and 7% during the 2016 campaign, peaking at around 8% in mid-October. It then dropped sharply on Election Day, to about 2% on Nov 8–9, and averaged about 3.9% after the election compared with about 5.6% before it.
+- First look (chart in the notebook): The share of Twitter news views coming from fake news sites mostly stayed between about 4% and 7% during the 2016 campaign, peaking at around 8% in mid-October. It then dropped sharply on Election Day, to about 2% on Nov 8–9, and averaged about 3.9% after the election compared with about 5.6% before it.
 
 **Twitter website totals**
 - Columns: `website` (text), `N` (int, total views)
@@ -61,6 +61,12 @@ All four datasets load from their URLs in `data_acquisition.ipynb` using `pd.rea
 **Facebook fact-check**
 - Time: Sept 19 to 27, 2016. 9 Facebook pages.
 - Important columns: `Rating` (text: mostly true / mostly false / mixture / no factual content), `share_count` (float), `Category` (mainstream, left, right)
+- We checked the missing values in each column using `facebook.isna().sum()` since some values in `share_count` are missing.
+- We grouped the posts by `Rating` and calculated the median `share_count` for each group.
+- We also made a simple bar chart to compare the median number of shares between the different ratings.
+- This gives us a first look at whether posts with different levels of factual accuracy received different amounts of engagement on Facebook.
+- Since the dataset only covers 9 Facebook pages over about one week, we should be careful about treating the results as representative of all Facebook activity.
+- Later, we can compare these Facebook engagement patterns with the Twitter data to see if the same type of content gets similar attention across both platforms.
 
 **Website quality ratings**
 - Columns: `domain` (text), `pc1` (float, quality score)
