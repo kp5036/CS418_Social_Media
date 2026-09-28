@@ -48,6 +48,7 @@ All four datasets load from their URLs in `data_acquisition.ipynb` using `pd.rea
 **Twitter daily counts**
 - Time: Aug 1 to Dec 6, 2016. Place: United States.
 - Important columns: `date` (text), `N` (int, total news views that day), `pct_fake` (float, fraction of views from fake news sites)
+- - First look (chart in the notebook): The share of Twitter news views coming from fake news sites mostly stayed between about 4% and 7% during the 2016 campaign, peaking at around 8% in mid-October. It then dropped sharply on Election Day, to about 2% on Nov 8–9, and averaged about 3.9% after the election compared with about 5.6% before it.
 
 **Twitter website totals**
 - Columns: `website` (text), `N` (int, total views)
