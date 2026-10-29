@@ -59,13 +59,11 @@ Krish: parts 1, 3, 4, 5. Mahi: part 2. Dravya: part 6.
 
 ## 2. Scope (Mahi)
 
-> TODO Mahi
-
 | Research question | Target population | Access frame | Sample | Who/what is missing | What we can't claim |
 |---|---|---|---|---|---|
-| 1. Does the typical fake article get shared more than the typical real one? | TODO | TODO | TODO | TODO | TODO |
-| 2. How did the fake news share on Twitter change over time? | TODO | TODO | TODO | TODO | TODO |
-| 3. Is low-quality news concentrated in a few websites, and do they get more views? | TODO | TODO | TODO | TODO | TODO |
+| 1. Does the typical fake article get shared more than the typical real one? | All fake and real news articles shared on social media | Articles that PolitiFact fact-checked (Twitter); posts from 9 political Facebook pages (Facebook) | 1,032 PolitiFact articles (423 fake, 609 real) with tweets found by headline search; 2,282 Facebook posts from Sept 19-27, 2016 | Articles PolitiFact never checked; tweets that shared an article without the exact headline; deleted tweets; other platforms; dates | That fake news in general gets shared more everywhere, or that being fake causes more sharing. Our results only apply to fact-checked articles. |
+| 2. How did the fake news share on Twitter change over time? | All U.S. Twitter users and the political news they saw during the 2016 election | Twitter accounts that could be matched to U.S. voter registration records | 16,442 accounts; a random sample of political tweets with links in their feeds, Aug 1 - Dec 6, 2016, given to us as 128 daily totals | Users who couldn't be matched (non-voters, fake names, non-U.S.); bots; tweets without links; images and videos; data on individual people | Anything about all Twitter users, about individual people, or about times after 2016. We also can't say which stories were fake, only which websites. |
+| 3. Is low-quality news concentrated in a few websites, and do they get more views? | All news websites and the attention they get online | Websites that showed up in the Twitter panel's feeds and have a quality rating | 534 of the 606 Twitter websites that matched a quality score | 72 unmatched sites (mostly subdomains); sites the panel never saw; other platforms; number of articles per site | Views per article (we only have total views per site), anything about sites outside this panel, or that low quality causes more or fewer views. |
 
 ---
 
