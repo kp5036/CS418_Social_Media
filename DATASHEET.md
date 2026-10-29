@@ -130,7 +130,7 @@ The Facebook data is only compared with FakeNewsNet, not joined, so it has no jo
 
 ---
 
-## 6. People in the data (Dravya)
+## 6. People in the data
 
 People are represented in our datasets mostly through their activity on social media and through the news websites or pages they interact with. In the Twitter 2016 dataset, the people included were registered U.S. voters who used Twitter and could be matched to voter registration records. This means people who were not registered voters, did not use Twitter, or could not be matched are missing. The study said the group was largely similar to U.S. voters on Twitter in age, gender, race, and political party, but it still does not represent everyone. Bots were removed, although some partly automated accounts may have remained.
 
