@@ -77,3 +77,18 @@ All four datasets load from their URLs in `data_acquisition.ipynb` using `pd.rea
 - The Twitter data only has daily totals, not individual tweets. The individual-level data is private.
 - Some FakeNewsNet articles have no tweets and some have no URL.
 - The Facebook data only covers one week.
+
+## Data documentation
+
+More details about the datasets, limitations, and people represented in the data are available in [DATASHEET.md].
+
+### Datasets
+
+- **Twitter 2016:** Grinberg et al. (2019), Zenodo DOI 10.5281/zenodo.2483311. License: Other (Open).
+- **FakeNewsNet:** Shu et al. (2020), github.com/KaiDMML/FakeNewsNet. No license file is provided; copyright is listed as © 2019 Arizona Board of Regents on behalf of Arizona State University.
+- **Facebook fact-check:** BuzzFeed News (2016), github.com/BuzzFeedNews/2016-10-facebook-fact-check. No license file is provided.
+- **Website quality ratings:** Lin et al. (2023), github.com/hauselin/domain-quality-ratings. No license file is provided, but the README says the data may be reused.
+
+### Main limitation
+
+Our biggest limitation is that the Twitter dataset only gives daily and website-level totals, not individual tweets or individual exposure records. FakeNewsNet mainly provides tweet IDs found using headline searches, so we cannot fully tell who actually saw each article or how every article spread.
