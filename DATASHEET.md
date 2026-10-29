@@ -132,4 +132,18 @@ The Facebook data is only compared with FakeNewsNet, not joined, so it has no jo
 
 ## 6. People in the data (Dravya)
 
-> TODO Dravya
+People are represented in our datasets mostly through their activity on social media and through the news websites or pages they interact with. In the Twitter 2016 dataset, the people included were registered U.S. voters who used Twitter and could be matched to voter registration records. This means people who were not registered voters, did not use Twitter, or could not be matched are missing. The study said the group was largely similar to U.S. voters on Twitter in age, gender, race, and political party, but it still does not represent everyone. Bots were removed, although some partly automated accounts may have remained.
+
+There are also possible problems with how groups are represented. Fake news is sometimes labeled at the website level instead of the individual story level, so all writers or owners of a website may be grouped together even if not every article is false. FakeNewsNet only includes articles checked by PolitiFact and tweets found by searching article headlines, so it may miss other political topics, users, or ways that stories were shared. The Facebook dataset is also limited because it only includes posts from nine selected political pages. These choices can affect conclusions about which people or groups are more likely to share or see fake news.
+
+Using the CARE principles also helps us think about the people behind the data. Decisions based on these datasets could affect social media users, journalists, news organizations, political groups, and researchers. Since users may not have directly agreed to be part of these studies, the data should be used carefully and without trying to identify individual people.
+
+CARE principles
+
+Collective benefit: The data can help researchers understand how misinformation spreads and potentially improve public awareness.
+
+Authority to control: Social media users had limited control over how their public activity was included, so restrictions against re-identification are important.
+
+Responsibility: Researchers should explain the limitations of the data and avoid making broad claims about groups that are not fully represented.
+
+Ethics: The data should be used in ways that protect privacy and do not unfairly label or target individual users or communities.
