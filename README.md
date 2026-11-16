@@ -1,3 +1,31 @@
+## Main Findings (Narrative Analysis)
+
+- The typical fake political article in FakeNewsNet was shared on more tweets than the typical real one (median 76 vs. 7 tweets), even though the most viral articles were real.
+- On Twitter, the share of news views that came from fake news sites was lower after Election Day than before it (3.9% vs. 5.6% of daily views).
+- Low-quality news websites were 29% of the sites in our Twitter data but got only about 11% of the views, and a typical low-quality site got about half the views of a typical high-quality site.
+
+All numbers and figures come from [`narrative.ipynb`](narrative.ipynb). Run it from top to bottom to reproduce them.
+
+### Finding 1: The typical fake article was shared more, but the most viral articles were real
+
+We compared tweet counts for 423 fake and 609 real PolitiFact articles in FakeNewsNet. The median fake article was shared on 76 tweets and the median real article on 7. The 95% bootstrap confidence interval for the difference is 49 to 92 tweets, and a permutation test gave p < 0.001, so the gap is very unlikely to be just chance. A small p-value doesn't tell us how big or important the gap is, though. If you pick one random fake and one random real article, the fake one has more tweets about 64% of the time. The mean tells a different story: real articles average 643 tweets and fake ones 376, because the most viral real articles have far more tweets (the 90th percentile is 1,537 tweets for real vs. 745 for fake). So fake news wins for the *typical* article, but not at the very top. One alternative explanation is a data collection quirk: FakeNewsNet found tweets by searching for the headline, and 35% of real articles have 0 tweets found, compared with only 9% of fake ones. To check this, we kept only articles with at least 1 tweet. The gap got smaller (99 vs. 55 tweets, 95% CI for the difference 9.5 to 72) but did not go away. We also checked a second platform: on Facebook (BuzzFeed data), "mostly false" posts had a median of 1,178 shares vs. 57 for "mostly true." Part of that is a confounder, the type of page, because mainstream pages post mostly true content and get few shares. Within right-leaning pages the gap still holds (1,019 vs. 92), and within left-leaning pages it's smaller (4,587 vs. 2,296). We can only say fake articles were *associated* with more sharing, not that being fake *causes* more sharing.
+
+![The typical fake article was shared on more tweets than the typical real one](figures/finding-1.png)
+
+### Finding 2: The fake news share on Twitter dropped after Election Day
+
+Finding 1 is about single articles, so next we looked at how much of all the news people saw was fake over time. In the Grinberg et al. panel of 16,442 Twitter users, an average of 5.6% of daily political news views came from fake news sites in the 99 days before Election Day. In the 29 days from Election Day on, the average was 3.9%. That's a drop of 1.7 percentage points (95% bootstrap CI 1.3 to 2.0, permutation test p < 0.001). One alternative explanation is the day of the week, since weekends have more fake news. The drop holds on both weekdays (5.2% → 3.5%) and weekends (6.6% → 4.8%). Another issue is that days next to each other are similar, which makes daily tests too confident, so we redid the comparison with weekly averages (15 weeks before, 5 after). We got almost the same gap with a similar CI (1.3 to 2.1). Finally, the days right after the election had huge news volume, and more total news goes with a lower fake share (correlation −0.51). After dropping Nov 8–10, the after-election average is still 4.1%. We can't say the election *caused* the drop, because news topics and attention changed at the same time. And the "after" period is only 4 weeks.
+
+![Fake news share on Twitter fell from 5.6% to 3.9% after Election Day](figures/finding-2.png)
+
+### Finding 3: Low-quality news sites got a small share of the views
+
+Findings 1 and 2 suggest fake news spreads well per article but is still a small part of what people see. To see why, we joined the Twitter website totals with the Lin et al. (2023) quality scores (534 sites matched). Low-quality sites (score under 0.4) were 29% of the sites but got only 11.4% of the views (95% bootstrap CI 6.4% to 18.2%, from resampling websites). High-quality sites (over 0.7) were 37% of sites and got 57% of views. The median low-quality site had 5,304 views vs. 11,185 for the median high-quality site (95% CI for the difference 1,140 to 9,503). Quality and views are only weakly related (Spearman correlation 0.17), so there's a lot of overlap. One alternative explanation is that a few giant mainstream sites drive everything. When we drop the 10 most-viewed sites, low-quality sites still get only 15.1% of views. Our 0.4 cutoff was our own choice, so we also tried 0.3 and 0.5, and the low-quality share stays small (8.6% to 15.5%). We also found that low-quality views are concentrated: breitbart.com alone has 20.8% of them and the top 10 low-quality sites have 57.4%. High-quality views are just as concentrated, though, so this is true of news in general. One limit is that the 72 sites without a rating (1.6% of views) are left out, and the ratings are from 2023, not 2016.
+
+![Low-quality sites were 29% of news sites but got only 11% of Twitter views](figures/finding-3.png)
+
+---
+
 # CS 418 Group Project: Fake News on Social Media
 
 **Team:** Krish Patel, Mahi Patel, Dravya Dholakiya
