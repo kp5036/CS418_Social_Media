@@ -4,7 +4,9 @@
 - On Twitter, the share of news views that came from fake news sites was lower after Election Day than before it (3.9% vs. 5.6% of daily views).
 - Low-quality news websites were 29% of the sites in our Twitter data but got only about 11% of the views, and a typical low-quality site got about half the views of a typical high-quality site.
 
-All numbers and figures come from [`narrative.ipynb`](narrative.ipynb). Run it from top to bottom to reproduce them.
+
+**How to reproduce:** run `narrative.ipynb` from top to bottom (needs pandas, numpy and matplotlib). It downloads the data, prints every number in this section, and saves the three figures to `figures/`. Longer notes on the analyses we left out are in [NARRATIVE.md](NARRATIVE.md).
+
 
 ### Finding 1: The typical fake article was shared more, but the most viral articles were real
 
